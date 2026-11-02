@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ORG } from "@/lib/config";
 import { CONTENT as C } from "@/lib/content";
 import ContactForm from "./ContactForm";
+import Donate from "./Donate";
 
 // Shows the photo when a path is set in lib/config.js, otherwise a placeholder block
 function Pic({ src, label, alt, className = "" }) {
@@ -194,7 +195,9 @@ export default function Site() {
           </div>
         </section>
 
-        <section className="paper">
+        <Donate />
+
+        <section>
           <div className="wrap">
             <Head tag={C.gallery.tag} title={C.gallery.title} />
             <div className="gal">
@@ -225,7 +228,7 @@ export default function Site() {
             <h2>{C.cta.title}</h2>
             <p>{C.cta.text}</p>
             <a className="btn" href="#partnerships">{C.cta.cta1}</a>{" "}
-            <a className="btn alt" href="#contact">{C.cta.cta2}</a>
+            <a className="btn alt" href="#donate">{C.cta.cta2}</a>
           </div>
         </section>
       </main>
@@ -234,7 +237,7 @@ export default function Site() {
         <div className="wrap grid4">
           <div><h3>{ORG.name}</h3><p>{ORG.tagline}</p></div>
           <div><h3>About</h3><a href="#about">Who we are</a><a href="#programs">Programs</a><a href="#impact">Impact</a></div>
-          <div><h3>Get involved</h3><a href="#events">Events</a><a href="#partnerships">Partnerships</a><a href="#resources">Resources</a></div>
+          <div><h3>Get involved</h3><a href="#events">Events</a><a href="#partnerships">Partnerships</a><a href="#donate">Donate</a><a href="#resources">Resources</a></div>
           <div><h3>Contact</h3><a href="#contact">Get in touch</a></div>
         </div>
         <div className="wrap legal">&copy; {new Date().getFullYear()} {ORG.name}. {C.footer.rights}</div>
